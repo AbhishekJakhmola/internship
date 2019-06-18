@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script>
+			var array = [];
+			function ADD()
+        	{
+        	    var userInput = document.getElementById("userInput").value;
+				array.push(userInput);
+				PRINT();
+        	}
+        	function SORT()
+        	{
+        		array.sort();
+        		PRINT();
+        	}
+        	function REVERSE()
+        	{
+        		array.reverse();
+        		PRINT();
+        	}
+        	function PRINT()
+        	{ 
+        		document.getElementById("pr").innerHTML= array;
+			}
+		</script>
+	</head>
+	<body onload="PRINT()">
+		<input type="text" id="userInput"=>give me input</input>
+
+    	<button onclick="ADD()">Add element</button><br>
+    	<p id = "pr"> </p>
+    	<button onclick="SORT()">SORT</button><br>
+    	<button onclick="REVERSE()">REVERSE</button><br>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<script>
+			var array = [];
+            var e = "Empty Queue! no element found."
+			function ENQUEUE()
+        	{
+        	    var userInput = document.getElementById("userInput").value;
+				array.push(userInput);
+				PRINT();
+        	}
+        	function DEQUEUE()
+        	{    if(array.length == 0)
+                   document.getElementById("pr").innerHTML= e;
+               else {
+        		array.reverse();
+                array.pop();
+                array.reverse();
+        		PRINT();
+            }
+        	}
+        	function PRINT()
+        	{ 
+        		document.getElementById("pr").innerHTML= array;
+			}
+		</script>
+	</head>
+	<body onload="PRINT()">
+		<input type="text" id="userInput"=>give me input</input>
+
+    	<button onclick="ENQUEUE()">ENQUEUE</button><br>
+    	<p id = "pr"> </p>
+    	<button onclick="DEQUEUE()">DEQUEUE</button><br>
+	</body>
+</html>
